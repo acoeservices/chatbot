@@ -1,14 +1,14 @@
 'use strict'
-const ecpress = require('express')
+const express = require('express')
 const bodyParser = require('body-parser')
 const request = require('request')
 
 const app = express()
-app.set('port',(process.env.PORT || 5000)
+app.set('port',(process.env.PORT || 5000))
 
 //Allows us to process the data
 
-app.use(bodyParser.urlenocded({extended: false})))
+app.use(bodyParser.urlencoded({extended: false}))
 
 app.use(bodyParser.json())
 
@@ -21,7 +21,7 @@ app.get('/',function(req,res){
 //Facebok
 
 app.get('/webhook',function(req,res){
-    if(req.query['hub.verify_token']==="blondiebutes"){
+    if(req.query['hub.verify_token']==="Robotalk"){
         req.send(req.query['hub.challenge'])
     }
     res.send("Wrong Token")
