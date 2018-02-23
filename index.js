@@ -21,7 +21,7 @@ app.get('/',function(req,res){
 })
 
 //Facebok
-/*
+
 
 app.get('/webhook',function(req,res){
     if(req.query['hub.verify_token']==="Robotalk"){
@@ -29,9 +29,9 @@ app.get('/webhook',function(req,res){
     }
     res.send("Wrong Token")
 })
-*/
 
-app.listen(app.get('port'),function(){
-    console.log("running : port");
+
+app.listen(app.get('port'),function(value){
+    console.log("running : port ai"+value);
 });
 
