@@ -24,7 +24,7 @@ app.get('/',function(req,res){
 
 
 app.get('/webhook',function(req,res){
-    if(req.query['hub.verify_token']==="Robotalk"){
+    if(req.query['hub.verify_token']==="chatbot"){
         req.send(req.query['hub.challenge'])
     }
     res.send("Wrong Token")
